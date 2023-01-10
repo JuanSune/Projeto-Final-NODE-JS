@@ -7,7 +7,11 @@
     // Body Parser
     app.use(express.urlencoded({extended: true}));
     app.use(express.json());
-
+    // Handlebars
+    app.engine('handlebars', exp.engine({defaultLayout: 'main'}));
+    app.set('view engine', 'handlebars');
+    // Mongoose
+        // Em breve
     
 // Rotas
 
