@@ -5,6 +5,8 @@
     // const mongoose = require('mongoose');
      const rotas = require('./rotas/admin');
 
+    const path = require('path');
+
 // Configurações
     // Body Parser
     app.use(express.urlencoded({extended: true}));
@@ -15,6 +17,9 @@
     // Mongoose
         // Em breve
     
+        // Public
+        app.use(express.static(path.join(__dirname + "/public")))
+
 // Rotas
     app.get('/', (req,res) => {
         res.send('Esse e o site, essa e a rota principal');

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
     router.get('/', (req,res) => {
-        res.send("Bem vindo a rota principal, isso e sdo um teste")
+        res.render('admin/index');
     });
 
     router.get('/posts', (req,res) => {
